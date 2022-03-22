@@ -9,6 +9,6 @@ router.get('/users', jwtToken.validateToken,usersController.getUsers);
 router.post('/user', userValidator.add, usersController.postUser);
 router.put('/user', userValidator.update,usersController.putUser);
 router.delete('/user', userValidator.id,usersController.deleteUser);
-router.post("/login", userValidator.id, usersController.getLogin);
+router.post("/login", userValidator.id, usersController.getLogin); 
 
 module.exports = router;
