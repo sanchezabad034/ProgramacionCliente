@@ -1,4 +1,4 @@
-const{check, validatioResult}= require('express-validator');
+const{check, validationResult}= require('express-validator');
 
 
 const generatepetValidators= ()=>[
