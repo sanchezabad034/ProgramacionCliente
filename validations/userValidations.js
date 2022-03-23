@@ -8,10 +8,11 @@ const generateUserValidators= ()=>[
     check('address').notEmpty().isLength({max:150}).withMessage("Invalid address")
 ]
 const updateUserValidators= ()=>[
-    check('name').notEmpty().isLength({max:50}).withMessage("Invalid name"),
-    check('lastname').isLength({max:50}).withMessage("Invalid last name"),
+    check('id').notEmpty().isLength({max:50}).withMessage("Invalid name"),
+    check('name').optional().isLength({max:50}).withMessage("Invalid name"),
+    check('lastname').optional().isLength({max:50}).withMessage("Invalid last name"),
     check('phone').optional().isLength({min: 10, max:10}).withMessage("Invalid phone"),
-    check('address').isLength({max:150}).withMessage("Invalid address")
+    check('address').optional().isLength({max:150}).withMessage("Invalid address")
 ]
 
 const generateIdValidators=()=>[
