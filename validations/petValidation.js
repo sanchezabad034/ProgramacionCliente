@@ -8,7 +8,7 @@ const generatepetValidators= ()=>[
     check('notes').notEmpty().isLength({max:150}).withMessage("Invalid notes")
 ] 
 const updatepetValidators= ()=>[
-    check('id').notEmpty().isLength({max:11}).withMessage("Invalid alias"),
+    check('id').notEmpty().isNumeric().isLength({max:11}).withMessage("Invalid id"),
     check('alias').optional().isLength({max:50}).withMessage("Invalid alias"),
     check('type').optional().isIn(['DOG','Cat']).withMessage("Invalid type"),
     check('color').optional().isLength({max:20}).withMessage("Invalid color"),
